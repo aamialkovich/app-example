@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { FormControl } from '@angular/forms';
+import { Observable, of } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'autocomplete-app';
+  formControl = new FormControl();
+  options: Observable<any> = of([]);
+
+  constructor() {
+  }
+
+  ngOnInit() {
+  }
 }
